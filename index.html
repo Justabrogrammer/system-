@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Project Management System</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Project Management System</h1>
+        
+        <!-- Form to add a new project -->
+        <form id="projectForm" method="POST">
+            <label for="projectName">Project Name:</label>
+            <input type="text" id="projectName" required>
+
+            <label for="projectDescription">Project Description:</label>
+            <textarea id="projectDescription" rows="4" required></textarea>
+
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" required>
+
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" required>
+
+            <label for="status">Status:</label>
+            <select id="status" required>
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+            </select>
+
+            <button type="button" onclick="addProject()">Add Project</button>
+        </form>
+
+        <!-- Display list of projects -->
+        <div id="projectsList">
+            <h2>Projects List</h2>
+            <ul id="projectsUl"></ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
